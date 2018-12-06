@@ -1,0 +1,13 @@
+cron-wrapper
+============
+
+Simple bash wrapper that runs a command and suppresses output unless a non-zero exit occurrs, in which case the program's output (stdout and stderr) are sent to stdout.
+
+Purpose to allow commands to be run via cron without generating an email unless a non-zero exit occurrs, in which case output will occur causing cron to send an email.
+
+It is minimally dependent on things that are not routinely installed by design - nothing outside coreutils on most Linux distributions.
+
+Only (non-bash-builtin) dependencies are:
+  * mktemp
+  * cat
+  * rm
