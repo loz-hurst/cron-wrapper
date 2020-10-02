@@ -25,7 +25,7 @@ exit_stat="$?"
 
 if [ "$exit_stat" -ne 0 ]
 then
-	echo "cron_wrapper: Command exited with non-zero exit status.  Dumping output." >&2
+	echo "cron_wrapper: Command exited with non-zero exit status ($exit_stat).  Dumping output." >&2
 	echo "----------------------------------------" >&2
 	cat $OUTFILE
 fi
